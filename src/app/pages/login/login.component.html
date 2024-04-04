@@ -1,0 +1,46 @@
+
+<!-- login.component.html -->
+<div class="custom-box">
+  <mat-card class="card-box">
+    <h1>Inicio de Sesion</h1>
+    <img src="../../../assets/imgs/login-icon.png" alt="Imagen" class="login-img">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-login">
+      <mat-form-field class="input-form">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Enter your username" formControlName="username" >
+      </mat-form-field>
+      <mat-form-field class="input-form">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Enter your password" formControlName="password" type="password">
+      </mat-form-field>
+      <button mat-flat-button color="primary" type="submit" class="button-login">Iniciar Sesion</button>
+    </form>
+
+      <div class="login-extra">
+        <button class="btn-sesion" (click)="login()">
+          <img src="https://img.icons8.com/color/22/000000/google-logo.png"  class="img-icon"> Continuar con Google
+        </button>
+      </div>
+      <div class="login-extra">
+        <button class="btn-sesion">
+            <img src="../../../assets/imgs/icon-micro-50.png" width="30px" class="img-icon"> Continuar con Microsoft
+        </button>
+      </div>
+
+      <div class="login-extra">
+        <button class="btn-sesion-fb">
+            <img src="../../../assets/imgs/icon-fb-50.png" width="30px" class="img-icon"> Continuar con Facebook
+        </button>
+      </div>
+
+      <div class="login-extra">
+        <button class="btn-sesion">
+            <img src="https://img.icons8.com/color/22/000000/google-logo.png" class="img-icon"> Continuar con Apple
+        </button>
+      </div>
+
+
+  </mat-card>
+</div>
+
+
