@@ -14,7 +14,7 @@ export class LoginService {
 
   initLogin(){
     const config: AuthConfig = {
-      issuer: 'htts://accounts.google.com',
+      issuer: 'https://accounts.google.com',
       strictDiscoveryDocumentValidation: false,
       clientId: '119368073120-e2jcckdelo7feckj5f7lvrhbnejfrjai.apps.googleusercontent.com',
       redirectUri: window.location.origin + '/home',
