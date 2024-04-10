@@ -6,7 +6,8 @@ import { SharedModule } from "src/app/shared/shared.module";
 import { LoginRoutingModule } from "./login.routing.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
-import { OAuthModule } from "angular-oauth2-oidc";
+// import { OAuthModule } from "angular-oauth2-oidc";
+// import { SocialLoginModule } from "@abacritt/angularx-social-login";
 
 
 
@@ -23,6 +24,7 @@ import { OAuthModule } from "angular-oauth2-oidc";
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
+    // SocialLoginModule
 
 
   ],

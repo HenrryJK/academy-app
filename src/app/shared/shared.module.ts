@@ -31,6 +31,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatRippleModule } from '@angular/material/core';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { SocialLoginModule } from '@abacritt/angularx-social-login';
 
 export const MaterialModules = [
   MatSnackBarModule,
@@ -74,6 +75,7 @@ export const MaterialModules = [
     FormsModule,
     ReactiveFormsModule,
     MaterialModules,
+    // SocialLoginModule
 
   ],
   exports: [
@@ -81,6 +83,7 @@ export const MaterialModules = [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    // SocialLoginModule
   ]
 })
 export class SharedModule { }

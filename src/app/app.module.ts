@@ -7,6 +7,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
+import { MSAL_INSTANCE, MsalModule, MsalService } from '@azure/msal-angular';
+import { IPublicClientApplication, PublicClientApplication } from '@azure/msal-browser';
+
+export function MSAInstanceFactory(): IPublicClientApplication{
+    return new PublicClientApplication({
+      auth: {
+        clientId: 'ea071adc-5b9b-436f-b8fe-542ea94eb188',
+        redirectUri: 'http://localhost:4200'
+      }
+    })
+}
+
 
 
 @NgModule({
@@ -19,9 +31,16 @@ import { OAuthModule } from 'angular-oauth2-oidc';
     AppRoutingModule,
     SharedModule,
     HttpClientModule,
-    OAuthModule.forRoot()
+    OAuthModule.forRoot(),
+    MsalModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: MSAL_INSTANCE,
+      useFactory: MSAInstanceFactory
+    },
+    MsalService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
