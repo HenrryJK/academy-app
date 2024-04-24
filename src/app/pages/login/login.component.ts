@@ -119,6 +119,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   //Facebook Login
   signInWithFB(): void {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
+    this.router.navigate(['home'])
   }
   // refreshToken(): void {
   //   this.ssoauthService.refreshAuthToken(FacebookLoginProvider.PROVIDER_ID);

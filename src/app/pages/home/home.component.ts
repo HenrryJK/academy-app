@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MsalService } from '@azure/msal-angular';
 import { LoginService } from 'src/app/services/google-service/login-service.service';
+import { StorageService } from 'src/app/services/storage-service/storage.service';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,7 @@ export class HomeComponent {
     private router: Router,
     private loginService: LoginService,
     private msalService: MsalService,
+    private readonly storageService: StorageService,
   ){}
 
 
@@ -28,8 +30,14 @@ export class HomeComponent {
   }
 
   logoutMicrosoft(){
-    this.msalService.logout();
-    this.router.navigate(['/login']);
+    // this.storageService.clear();
+    if (this.msalService.logout == this.logOut) {
+      this.router.navigate(['/login']);
+    } else {
+
+      this.msalService.logout();
+    }
+
     // this.msalService.logoutRedirect({postLogoutRedirectUri: this.enviroment});
   }
 
