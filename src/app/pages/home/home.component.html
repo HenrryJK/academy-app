@@ -10,7 +10,29 @@
   <div>
     <button  mat-flat-button color="accent" (click)="logoutMicrosoft()">LogOut with Microsoft</button>
   </div>
+
+  <div>
+    <button  mat-flat-button color="accent" (click)="logoutFB()">LogOut with Facebook</button>
+  </div>
 </div>
+
+<div class="profile-fb" *ngIf="loggedIn">
+  <img src="{{user.response.picture.data.url}}" alt="" height="90px" width="100px">
+  <div>
+    <h4>{{user.name}}</h4>
+    <p>{{user.email}}</p>
+  </div>
+</div>
+
+
+<!-- <div class="profile-fb" *ngIf="userGoogle">
+  <img src="{{userGoogle.picture}}" alt="" height="90px" width="100px">
+  <div>
+    <h4>{{userGoogle.name}}</h4>
+    <p>{{userGoogle.email}}</p>
+  </div>
+</div> -->
+
 
 
 

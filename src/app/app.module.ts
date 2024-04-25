@@ -91,7 +91,7 @@ const isIE=window.navigator.userAgent.indexOf('MSIE')>-1 ||window.navigator.user
         providers: [
           {
             id: FacebookLoginProvider.PROVIDER_ID,
-            provider: new FacebookLoginProvider('744938157621931')
+            provider: new FacebookLoginProvider('439804315130167')
           }
         ],
         onError: (err) => {
